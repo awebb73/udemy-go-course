@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 var x int
 var y string
@@ -39,4 +42,8 @@ func main() {
 	h = int(g)
 	fmt.Println("The value of h is:", h)
 	fmt.Printf("%T\n", h)
+
+	// GOOS and GOARCH return the os and architechure spec for the pc
+	fmt.Println(runtime.GOOS)
+	fmt.Println(runtime.GOARCH)
 }
