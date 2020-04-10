@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+// DECLARE global scope vars as follow:
+// <var y int> OR
+// <var y = 42>
+
 func main() {
 	// n is the number of bytes
 	// err is a write error
@@ -15,6 +19,7 @@ func main() {
 	foo()
 
 	// _ is how we let the compiler know we arent goign to use a return value
+	// := is the short declaration operator. Used to declare and initialize local variables
 	x, _ := fmt.Println("something more")
 
 	fmt.Println("Number of bytes:", x)
